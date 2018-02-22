@@ -26,7 +26,7 @@ currentDate.getSeconds();
 button.addEventListener('click', function() {
     db.ref('/messages').push({
         message: message.value,
-        timeStamp: currentDate
+        timeStamp: currentDate.toString()
     });
     output.innerHTML = "";
     message.value = "";
