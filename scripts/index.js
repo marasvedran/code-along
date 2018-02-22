@@ -1,4 +1,4 @@
-var config = {
+let config = {
     apiKey: "AIzaSyComNsWjA4XYKSL_3TSTMz6T_xqSgcyiUU",
     authDomain: "example-461d0.firebaseapp.com",
     databaseURL: "https://example-461d0.firebaseio.com",
