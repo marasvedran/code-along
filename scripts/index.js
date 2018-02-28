@@ -17,19 +17,14 @@ let header = document.createElement("h2");
 header.innerText = "Messages";
 let child = document.createElement("p");
 
-let currentDate = new Date();
-
-currentDate.getFullYear();
-currentDate.getMonth();
-currentDate.getDay();
-currentDate.getHours();
-currentDate.getMinutes();
-currentDate.getSeconds();
-
 button.addEventListener('click', function() {
+    let currentDate = new Date();
+    let date = currentDate.toLocaleDateString();
+    let time = currentDate.toLocaleTimeString();
+
     db.ref('/messages').push({
         message: message.value,
-        timeStamp: currentDate.toString()
+        timeStamp: `${date} ${time}`
     });
     let messages = db.ref('/messages');
     output.innerHTML = "";
