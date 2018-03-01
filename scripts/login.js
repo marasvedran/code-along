@@ -28,3 +28,19 @@ $("#google-login").click(() => {
         // ...
     });
 });
+
+$("#login-email-password").click((event) => {
+    event.preventDefault();
+    let email = $("#email").val();
+    let password = $("#password").val();
+
+    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        let errorCode = error.code;
+        console.log("Error code", errorCode);
+        let errorMessage = error.message;
+        console.log("Error message", errorMessage);
+        // ...
+    });
+    window.location.assign("../views/index.html");
+});
