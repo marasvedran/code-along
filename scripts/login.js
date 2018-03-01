@@ -17,6 +17,7 @@ $("#google-login").click(() => {
         // The signed-in user info.
         let user = result.user;
         // ...
+        window.location.assign("../views/index.html");
     }).catch(function(error) {
         // Handle Errors here.
         let errorCode = error.code;
